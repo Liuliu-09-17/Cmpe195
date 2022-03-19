@@ -7,31 +7,153 @@ export default class Home extends Component {
         return (
             <View style={styles.container}>
                 <ScrollView>
-                    {/* <TouchableOpacity onPress={() => this.props.navigation.navigate('RealData')}>
-                        <Text>Click here go to Real Data</Text>
-                    </TouchableOpacity> */}
-                    <TextInput
-                        style={styles.input}
-                        placeholder='Search your crops' />
-
-                    <TouchableOpacity
-                        onPress={() => this.props.navigation.navigate('RealData')}
-                        style={styles.tag}>
-
-                        <Image
-                            source={require("../assets/images/apple.png")}
-                            style={styles.tagImage} />
-                        <View>
-                            <Text
-                                style={styles.tagName}>Apple</Text>
-                            <Text
-                                style={styles.tagDiscription}>Discription</Text>
-                        </View>
-                        <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('EditSensor')}>
-                            <Text>Edit</Text>
+                    <View style={styles.searchbar}>
+                        <TextInput
+                            style={styles.input}
+                            placeholder='Search crops' />
+                        <TouchableOpacity onPress={() => { alert("you clicked me") }}>
+                            <Image
+                                source={require("../assets/images/search.png")}
+                                style={styles.search}
+                            />
                         </TouchableOpacity>
-                    </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.searchHistory}>
+                        <TouchableOpacity
+                            style={styles.history}>
+                            <Text style={styles.historyText}>Apple</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.history}>
+                            <Text style={styles.historyText}>Banana</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.history}>
+                            <Text style={styles.historyText}>Chilli</Text>
+                        </TouchableOpacity>
+                        <TouchableOpacity
+                            style={styles.history}>
+                            <Text style={styles.historyText}>Tomato</Text>
+                        </TouchableOpacity>
+                    </View>
+
+                    <View style={styles.taglist}>
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/apple.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Apple</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/banana.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Banana</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/peach.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Peach</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/chilli.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Chilli</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/tomato.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Tomato</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                        <TouchableOpacity
+                            onPress={() => this.props.navigation.navigate('Data')}
+                            style={styles.tag}>
+                            <Image
+                                source={require("../assets/images/potato.jpeg")}
+                                style={styles.tagImage} />
+                            <View>
+                                <Text
+                                    style={styles.tagName}>Potato</Text>
+                                <Text
+                                    style={styles.tagDiscription}>information...</Text>
+                            </View>
+                            <TouchableOpacity
+                                onPress={() => this.props.navigation.navigate('EditSensor')}
+                                style={styles.edit}>
+                                <Text style={styles.editText}>Edit</Text>
+                            </TouchableOpacity>
+                        </TouchableOpacity>
+
+                    </View>
 
 
                 </ScrollView>
@@ -43,40 +165,83 @@ export default class Home extends Component {
 const styles = StyleSheet.create({
     container: {
         flex: 1,
-        color: 'white',
+    },
+    searchbar: {
+        flexDirection: "row",
     },
     input: {
         borderWidth: 1,
-        borderColor: '#777',
+        borderColor: '#8C8B8B',
         padding: 8,
-        margin: 10,
+        marginVertical: 20,
+        marginHorizontal: 15,
         width: 300,
+        borderRadius: 5,
+    },
+    search: {
+        height: 30,
+        width: 30,
+        marginTop: 23,
+        marginHorizontal: -5,
+    },
+    searchHistory: {
+        marginHorizontal: 15,
+        marginTop: -6,
+        flexDirection: "row",
+    },
+    history: {
+        marginHorizontal: 2,
+        borderWidth: 2,
+        borderColor: '#97E747',
+        borderRadius: 8,
+    },
+    historyText: {
+        color: '#72EF5E',
+        fontWeight: 'bold',
+        fontSize: 15,
+        marginRight: 5,
+        marginLeft: 5,
+    },
+    taglist: {
+        marginTop: 20,
     },
     tag: {
         flexDirection: "row",
-        color: '#FFFFFF',
+        backgroundColor: '#FFFFFF',
         borderWidth: 1,
         borderColor: '#777',
-        height: 80,
-        width: 300,
-        marginVertical: 10,
+        height: 100,
+        width: 360,
+        marginVertical: 2,
         marginHorizontal: 10,
+        borderRadius: 8,
+        borderColor: '#E3DDDD',
     },
     tagImage: {
-        marginHorizontal: 10,
-        marginVertical: 10,
-        height: 60,
-        width: 60
+        marginTop: 15,
+        marginLeft: 15,
+        marginRight: 30,
+        height: 67,
+        width: 85,
     },
     tagName: {
-        // marginHorizontal: 80, 
-        // marginVertical: -70,
-        fontWeight: 'bold',
-        fontSize: 16,
+        marginTop: 10,
+        fontWeight: '500',
+        fontSize: 20,
+        color: '#535151',
     },
     tagDiscription: {
-        marginHorizontal: 0,
-        marginVertical: 0,
+        marginTop: 7,
+        color: '#535151',
         fontSize: 16,
+    },
+    edit:{
+        marginTop: 30,
+        marginLeft: 70, 
+    },
+    editText:{
+        color: '#72EF5E',
+        fontWeight: '400',
+        fontSize: 22,
     },
 });
