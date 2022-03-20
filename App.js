@@ -9,7 +9,7 @@ import { View, Text, Button, TouchableOpacity, Image, StyleSheet } from 'react-n
 import Home from './screen/Home';
 import Data from './screen/Data';
 import EditSensor from './screen/EditSensor';
-import RealData from './screen/tab/Realdata';
+import RealData from './screen/Realdata';
 import SimulData from './screen/tab/SimulData';
 
 
@@ -71,7 +71,7 @@ export default class App extends Component {
               },
             }} />
 
-          {/* <Stack.Screen name="RealData" component={RealData}
+          <Stack.Screen name="RealData" component={RealData}
             options={{
               title: 'Real Data',
               headerStyle: {
@@ -82,7 +82,7 @@ export default class App extends Component {
                 fontWeight: 'bold',
                 fontSize: 20,
               },
-            }} /> */}
+            }} />
 
           {/* <Stack.Screen name="SimulData" component={SimulData}
             options={{
