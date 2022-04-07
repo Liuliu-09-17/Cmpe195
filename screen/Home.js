@@ -40,7 +40,7 @@ export default class Home extends Component {
 
                     <View style={styles.taglist}>
                         <TouchableOpacity
-                            onPress={() => this.props.navigation.navigate('RealData')}
+                            onPress={() => this.props.navigation.navigate('Apple')}
                             style={styles.tag}>
                             <Image
                                 source={require("../assets/images/apple.jpeg")}
